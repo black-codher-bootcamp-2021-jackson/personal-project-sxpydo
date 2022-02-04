@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,300&family=Mochiy+Pop+P+One&display=swap');
+
+/* Webpage Home */
+body {
+    position: relative;
+    width: 2806px;
+    height: 1494px;
+    background: #FFFFFF;
+}
+
+
+/* Buttons */
+button {
+    position: absolute;
+    width: 1864px;
+    height: 109px;
+    left: 942px;
+    top: 105px;
+}
+
+/* Sign Up btn */
+.signup {
+    position: absolute;
+    width: 791.22px;
+    height: 109px;
+    left: 942px;
+    top: 105px;
+    border-radius: 45px;
+}
+
+
+
+/* Create account button */
+
+.create-acc{
+    position: absolute;
+    width: 503px;
+    height: 105px;
+    left: 0px;
+    top: 0px;
+    background: #000000;
+    border-radius: 30px;
+}
+
+
+/* Sign Up */
+
+position: absolute;
+width: 264px;
+height: 93px;
+left: 119px;
+top: 6px;
+
+font-family: Mochiy Pop P One;
+font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 93px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Log in btn */
+
+position: absolute;
+width: 791.22px;
+height: 109px;
+left: 2014.78px;
+top: 105px;
+
+
+
+/* Log in button */
+
+position: absolute;
+width: 503px;
+height: 105px;
+left: 0px;
+top: 0px;
+
+background: #000000;
+border-radius: 30px;
+
+
+/* Log in */
+
+position: absolute;
+width: 212px;
+height: 93px;
+left: 146px;
+top: 6px;
+
+font-family: Mochiy Pop P One;
+font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 93px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Slogan */
+
+position: absolute;
+width: 1467px;
+height: 117px;
+left: 12px;
+top: 1277px;
+
+font-family: Karla;
+font-style: italic;
+font-weight: normal;
+font-size: 64px;
+line-height: 75px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Background Shape */
+
+position: absolute;
+width: 810px;
+height: 794px;
+left: 73px;
+top: 157px;
+
+background: #F7DFFF;
+
+
+/* Homepage image */
+
+position: absolute;
+width: 1069px;
+height: 829px;
+left: 196px;
+top: 395px;
+
+background: url(.png);
+
+
+/* STEP OUT */
+
+position: absolute;
+width: 977px;
+height: 384px;
+left: 1605px;
+top: 809px;
+
+font-family: Mochiy Pop P One;
+font-style: normal;
+font-weight: normal;
+font-size: 144px;
+line-height: 209px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+
+/* STEP OUT */
+
+position: absolute;
+width: 980px;
+height: 384px;
+left: 1602px;
+top: 865px;
+
+font-family: Mochiy Pop P One;
+font-style: normal;
+font-weight: normal;
+font-size: 144px;
+line-height: 209px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
