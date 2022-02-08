@@ -1,14 +1,17 @@
 import React from "react";
 import InputField from "./InputField";
+import "../styles/SignUp.css";
 
 
 const SignUp = () => {
     return (
         <>
-        <div className="container">
-
+        <div className="flex-layout">
+        <div className="image-layout">
+            <img src="https://blush.design/api/download?shareUri=heh0w_1QUZ4wOFnc&w=800&h=800&fm=png"
+            alt=" Illustration by Blush" class="sign-img"/>
         </div>
-        <div>
+        <div className="form-layout">
             <h1>Create an account</h1>
             <form>
                 <InputField placeholder="Full name" type="text" />
@@ -30,6 +33,7 @@ const SignUp = () => {
         </div>
         <div className="already">
         <p>Already have an account?</p> <a href="/">Log in</a>
+        </div>
         </div>
         </>
     );
