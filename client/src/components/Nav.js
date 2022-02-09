@@ -2,21 +2,36 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Nav.css";
 
-const Navbar = () => {
+function Nav(props) {
   return (
-    <>
-      <nav id="navbar" class="nav">
-      <div id="navlist" class="nav-list">
-        <Link to="/SignUp" className="nav-link">
-            Sign up
-          </Link>
-        <Link to="/LogIn" className="nav-link">
-            Log in
-          </Link>
+    <div className="header">
+      <h1>Step Out</h1>
+      <div className="breadcrumb">
+        <ul>
+          <li>
+            <Link to="/" id="homelink">         
+              Home
+            </Link>
+          </li>
+          <li className="active">
+            <Link to="/about" id="aboutlink">
+              Our mission
+            </Link>
+          </li>
+          <li>
+            <Link to="/signup" id="signlink">
+              Sign up
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" id="loglink">
+              Log in
+            </Link>
+          </li>
+        </ul>
       </div>
-      </nav> 
-    </>
+    </div>
   );
-};
+}
 
-export default Navbar;
+export default Nav;

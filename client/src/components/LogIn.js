@@ -5,12 +5,12 @@ import InputField from "./InputField";
 const LogIn = () => {
     return (
         <>
-        <div className="container">
+        <div className="image-layout">
         <img
         src="https://blush.design/api/download?shareUri=rhPx27XLK186rHlI&w=800&h=800&fm=png"
         alt=" Illustration by Blush" class="log-img"/>
         </div>
-        <div>
+        <div className="form-layout">
             <h1>Log In</h1>
             <p>Hello again!</p>
             <form>
