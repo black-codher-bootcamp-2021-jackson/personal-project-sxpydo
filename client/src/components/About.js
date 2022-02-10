@@ -14,12 +14,12 @@ function About(props) {
         regardless of their race, gender, sexual preference or background.</p><br></br>
       <h3>Features</h3>
       <ul>
-          <li> *icon* Allows users to input upto 6 guardians from their contacts </li>
-          <li> *icon* You can plan your journey days or weeks in advance to meet either with your chosen guardian from their contacts or 
+          <li> <img alt="users icon" className="icon" src="icons/user.png"/> Allows users to input upto 6 guardians from their contacts </li>
+          <li> <img alt="calender icon" className="icon" src="icons/calender.png"/> You can plan your journey days or weeks in advance to meet either with your chosen guardian from their contacts or 
                a qualifed guardian to meet you at a safe meeting point to accompany you to your destination </li>
-          <li> *icon* NOW feature - With one click, a message, live GPS location and touch-activated SOS call will be sent to your 
-                selected guardians in an emergency situation.</li>  
-          <li> *icon* Our journey feature gives you the confidence to step out safely by allowing you to set a start and end destinations
+          <li> <img alt="now icon" className="icon" src="icons/now.png"/> NOW feature - With one click, a message, live GPS location and touch-activated SOS call will be sent to your 
+                selected guardians in an emergency situation</li>  
+          <li> <img alt="loc icon" className="icon" src="icons/location.png"/> Our journey feature gives you the confidence to step out safely by allowing you to set a start and end destinations
                in advance, using live GPS location to notify your guardians when you have reached your chosen destination safely.
                The platform will update your actual location in real time based on movement activity to locate where you are once an alert is raised,
                this feature can be used outside from the app using power-saver to prevent low battery on route!
