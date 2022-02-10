@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./components/Header";
+import Nav from "./Nav";
 
 function About(props) {
   return (
     <div className="about">
-      <Header/>
+      <Nav />
       <h2 style={{ marginBottom: "1%" }}>Our mission</h2>
       <p>
         Step Out has you covered, whether you're walking home alone, travelling to 
@@ -30,5 +30,3 @@ function About(props) {
 }
 
 export default About;
-
-// write about the app's purpose and it functionalities (functions = my user stories) and the instructions on the dashboard 

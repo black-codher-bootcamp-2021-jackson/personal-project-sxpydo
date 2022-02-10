@@ -1,9 +1,36 @@
-import React from "react";
+// import React, { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 import InputField from "./InputField";
+import TextLink from "../buttons/TextLink";
+import DefaultButton from "../buttons/DefaultButton";
 import "../styles/SignUp.css";
 
 
 const SignUp = () => {
+
+    // const navigate = useNavigate();
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
+    // const [user, setUser] = useState();
+
+    // async function registerUser(e) {
+    //     e.preventDefault()
+
+    //     const response = await fetch(`/api/`, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({
+    //             user,
+    //             email,
+    //             password,
+    //         }),
+    //     });
+    //         const data = await response.json();
+    //         console.log(data);
+    // }
+
     return (
         <>
         <div className="flex-layout">
@@ -24,19 +51,15 @@ const SignUp = () => {
                 </select>
                 <InputField placeholder="Create password" variant="password" />
                 <InputField placeholder="Confirm password" variant="password" />
+                <DefaultButton type="submit" label="Log in" />
             </form>
-        <a href ="./Dashboard.js">
-            <button id="create" class="create-button">
-                Create
-            </button>
-        </a>
         </div>
         <div className="already">
-        <p>Already have an account?</p> <a href="/">Log in</a>
+        <p>Already have an account?</p> <TextLink text="Log in" href="/login" target="_self" />
         </div>
         </div>
         </>
     );
 }
  
-export default SignUp
+export default SignUp;
