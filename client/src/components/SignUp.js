@@ -25,11 +25,11 @@ const SignUp = () => {
                 <InputField placeholder="Create password" variant="password" />
                 <InputField placeholder="Confirm password" variant="password" />
             </form>
-        <div class="form-group">
+        <a href ="./Dashboard.js">
             <button id="create" class="create-button">
                 Create
             </button>
-        </div>
+        </a>
         </div>
         <div className="already">
         <p>Already have an account?</p> <a href="/">Log in</a>

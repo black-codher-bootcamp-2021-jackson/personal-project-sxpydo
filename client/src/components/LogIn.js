@@ -18,11 +18,11 @@ const LogIn = () => {
                 <InputField placeholder="Password" variant="password" />
                 <a href="/">Forgotten password</a>
             </form>
-        <div class="form-group">
+        <a href="./Dashboard.js">
             <button id="log" class="submit-button">
                 Log in
             </button>
-        </div>
+        </a>
         </div>
         <div className="already">
             <a href="/">Forgotten password</a>
