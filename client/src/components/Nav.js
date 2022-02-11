@@ -5,12 +5,11 @@ import "../styles/Nav.css";
 function Nav(props) {
   return (
     <div className="header">
-      <h1>Step Out</h1>
       <div className="breadcrumb">
         <ul>
           <li>
-            <Link to="/" id="homelink">         
-              Home
+            <Link to="/home" id="homelink">         
+              STEPOUT
             </Link>
           </li>
           <li className="active">

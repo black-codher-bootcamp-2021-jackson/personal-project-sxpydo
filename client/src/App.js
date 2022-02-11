@@ -1,32 +1,27 @@
 // import React, { useState, useEffect } from "react";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LogIn from "./components/LogIn"
-//import InputField from "./components/InputField"
-import SignUp from "./components/SignUp"
-import About from "./components/About"
-import Dashboard from "./components/Dashboard"
+import Home from "./components/Home";
+import LogIn from "./components/LogIn";
+import SignUp from "./components/SignUp";
+import About from "./components/About";
+import Dashboard from "./components/Dashboard";
+import Nav from "./components/Nav";
+
 
 function App() {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
-      <Route path="/" id="sign-up" element={<SignUp />} />
+      <Route path="/home" id="home" element={<Home />} />
+      <Route path="/signup" id="sign-up" element={<SignUp />} />
       <Route path="/login" id="log-in" element={<LogIn />} />
       <Route path="/about" id="about" element={<About />} />
       <Route path="/dashboard" id="dashboard" element={<Dashboard />} />
-      </Routes> 
+      </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
-/* <>
-<div>
-      <img
-          src="https://blush.design/api/download?shareUri=5nSdU0Szjp&w=800&h=800&fm=png"
-          alt=" Illustration by Blush" class="home-img"/>
-      <p>"Strut with confidence!"</p>
-</div>
-</> */

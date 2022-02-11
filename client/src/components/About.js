@@ -1,10 +1,8 @@
 import React from "react";
-import Nav from "./Nav";
 
 function About(props) {
   return (
     <div className="about">
-      <Nav />
       <h2 style={{ marginBottom: "1%" }}>Our mission</h2>
       <p>
         Step Out has you covered, whether you're walking home alone, travelling to 
@@ -15,7 +13,7 @@ function About(props) {
       <h3>Features</h3>
       <ul>
           <li> <img alt="users icon" className="icon" src="icons/user.png"/> Allows users to input upto 6 guardians from their contacts </li>
-          <li> <img alt="calender icon" className="icon" src="icons/calender.png"/> You can plan your journey days or weeks in advance to meet either with your chosen guardian from their contacts or 
+          <li> <img alt="calender icon" className="icon" src="icons/calendar.png"/> You can plan your journey days or weeks in advance to meet either with your chosen guardian from their contacts or 
                a qualifed guardian to meet you at a safe meeting point to accompany you to your destination </li>
           <li> <img alt="now icon" className="icon" src="icons/now.png"/> NOW feature - With one click, a message, live GPS location and touch-activated SOS call will be sent to your 
                 selected guardians in an emergency situation</li>  

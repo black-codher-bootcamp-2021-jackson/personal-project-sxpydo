@@ -1,6 +1,6 @@
 // import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
-import InputField from "./InputField";
+import InputField from "../buttons/InputField";
 import TextLink from "../buttons/TextLink";
 import DefaultButton from "../buttons/DefaultButton";
 import "../styles/SignUp.css";
@@ -44,14 +44,15 @@ const SignUp = () => {
                 <InputField placeholder="Full name" type="text" />
                 <InputField placeholder="Email address" type="text" />
                 <InputField placeholder="Mobile number" type="email" />
-                <select id="dropdown" name="dropdown" class="form-control" required> <option disabled selected value>Gender</option>
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                    <option value="other" type="text">Other</option>
+                <select id="dropdown" name="dropdown" class="form-control" required> <option disabled selected value>Pronoun</option>
+                    <option value="she">she/her</option>
+                    <option value="he">he/him</option>
+                    <option value="they">they/them</option>
+                    <option value="zie">zie/zim</option>
                 </select>
                 <InputField placeholder="Create password" variant="password" />
                 <InputField placeholder="Confirm password" variant="password" />
-                <DefaultButton type="submit" label="Log in" />
+                <DefaultButton type="submit" label="Create" />
             </form>
         </div>
         <div className="already">

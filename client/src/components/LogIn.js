@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import InputField from "./InputField";
+import InputField from "../buttons/InputField";
 import TextLink from "../buttons/TextLink";
 import DefaultButton from "../buttons/DefaultButton";
 
@@ -9,7 +9,7 @@ const LogIn = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [user, setUser] = useState();
+    const [, setUser] = useState();
 
     useEffect(() => {
         const loggedInUser = localStorage.getItem("user")
@@ -51,9 +51,9 @@ const LogIn = () => {
                 <p>Hello again!</p>
             </div>
                 <form onSubmit={handleSubmit}>
-                    <InputField label="Email Address" type="email" value={email} onChange={(e) => setEmail(e.target.value)} 
+                    <InputField placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} 
                                 required="required" />
-                    <InputField label="Password*" variant="password" value={password} onChange={(e) => setPassword(e.target.value)}
+                    <InputField placeholder="Password*" variant="password" value={password} onChange={(e) => setPassword(e.target.value)}
                                 required="required" />
                     <DefaultButton type="submit" label="Log in" />
                 </form>
