@@ -3,7 +3,6 @@
 import InputField from "../buttons/InputField";
 import TextLink from "../buttons/TextLink";
 import DefaultButton from "../buttons/DefaultButton";
-import "../styles/SignUp.css";
 
 
 const SignUp = () => {

@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Nav />
       <Routes>
-      <Route path="/home" id="home" element={<Home />} />
+      <Route path="/" id="home" element={<Home />} />
       <Route path="/signup" id="sign-up" element={<SignUp />} />
       <Route path="/login" id="log-in" element={<LogIn />} />
       <Route path="/about" id="about" element={<About />} />
