@@ -9,7 +9,7 @@ const LogIn = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [, setUser] = useState();
+    const [user, setUser] = useState();
 
     useEffect(() => {
         const loggedInUser = localStorage.getItem("user")
@@ -24,7 +24,7 @@ const LogIn = () => {
         e.preventDefault();
         const user = { email, password };
         // send the username and password to the server
-        const response = await axios.post('/api/', user);
+        const response = await axios.post('/api/login', user);
         // Authenticate the user
         // authenticateUser(email, password); if user is authenticated then do the following
         // set the state of the user
@@ -41,6 +41,7 @@ const LogIn = () => {
 
     return (
         <>
+        <div className="flexible-layout">
             <div className="image-layout">
             <img
             src="https://blush.design/api/download?shareUri=rhPx27XLK186rHlI&w=800&h=800&fm=png"
@@ -49,18 +50,20 @@ const LogIn = () => {
             <div className="form-layout">
                 <h1>Log In</h1>
                 <p>Hello again!</p>
-            </div>
                 <form onSubmit={handleSubmit}>
                     <InputField placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} 
-                                required="required" />
+                                required="required" /> <br/><br/>
                     <InputField placeholder="Password*" variant="password" value={password} onChange={(e) => setPassword(e.target.value)}
-                                required="required" />
+                                required="required" /> <br/><br/>
                     <DefaultButton type="submit" label="Log in" />
                 </form>
+            <br/>
             <div className="already">
                 <a href="/">Forgotten password</a>
-            <p>Don't have an account?</p> <TextLink text="Sign up" href="/" target="_self" /> 
+                <p>Don't have an account?</p> <TextLink text="Sign up" href="/signup" target="_self" /> 
             </div>
+         </div>   
+        </div>
         </>
     );
 };

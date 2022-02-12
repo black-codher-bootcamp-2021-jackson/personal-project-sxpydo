@@ -9,22 +9,22 @@ function Nav(props) {
         <ul>
           <li className="nav-list">
           <Link to="/" id="homelink" className="nav-btn">
-              Home
+              <img alt="home icon" className="icon" src="icons/home.png"/>
             </Link>
           </li>
           <li>
             <Link to="/about" id="aboutlink" className="nav-btn">
-              About
+            <img alt="about icon" className="icon" src="icons/info.png"/>
             </Link>
           </li>
           <li>
             <Link to="/signup" id="signlink" className="nav-btn">
-              Sign up
+              <img alt="sign up icon" className="icon" src="icons/signup.png"/>
             </Link>
           </li>
           <li>
             <Link to="/login" id="loglink" className="nav-btn">
-              Log in
+              <img alt="log in icon" className="icon" src="icons/log-in.png"/>
             </Link>
           </li>
         </ul>
