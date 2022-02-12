@@ -9,7 +9,7 @@ const LogIn = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [user, setUser] = useState();
+    const [, setUser] = useState();
 
     useEffect(() => {
         const loggedInUser = localStorage.getItem("user")
@@ -47,17 +47,22 @@ const LogIn = () => {
             src="https://blush.design/api/download?shareUri=rhPx27XLK186rHlI&w=800&h=800&fm=png"
             alt=" Illustration by Blush" class="log-img"/>
             </div>
-            <div className="form-layout">
+            <div id="sign-form">
                 <h1>Log In</h1>
                 <p>Hello again!</p>
                 <form onSubmit={handleSubmit}>
+                <div class="form-group">
                     <InputField placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} 
-                                required="required" /> <br/><br/>
+                                required="required" /> 
+                </div>
+                <div class="form-group">
                     <InputField placeholder="Password*" variant="password" value={password} onChange={(e) => setPassword(e.target.value)}
-                                required="required" /> <br/><br/>
-                    <DefaultButton type="submit" label="Log in" />
+                                required="required" />
+                </div>
+                <div class="form-group">
+                    <DefaultButton type="submit" id="submit" className="submit-button" label="Log in" />
+                </div>
                 </form>
-            <br/>
             <div className="already">
                 <a href="/">Forgotten password</a>
                 <p>Don't have an account?</p> <TextLink text="Sign up" href="/signup" target="_self" /> 
