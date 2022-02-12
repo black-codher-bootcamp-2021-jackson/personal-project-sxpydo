@@ -7,8 +7,8 @@ const Home = () => {
       <>
         <div className="flexible-layout">
             <div className="step-out">
-                <h1 className="step1" style={{ transform: "matrix(1, 0, 0, -1, 0, 0)" }}>STEP OUT</h1>
-                <h1 className="step2">STEP OUT</h1>
+                <h1 className="step1" style={{fontSize: "65px", transform: "matrix(1, 0, 0, -1, 0, 0)" }}>STEP OUT</h1>
+                <h1 className="step2" style={{fontSize: "65px"}}>STEP OUT</h1>
             </div>
           <div className="image-layout">
               <img
