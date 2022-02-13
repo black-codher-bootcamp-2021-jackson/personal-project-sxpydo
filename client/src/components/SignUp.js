@@ -1,5 +1,6 @@
 // import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import InputField from "../buttons/InputField";
 import TextLink from "../buttons/TextLink";
 import DefaultButton from "../buttons/DefaultButton";
@@ -33,7 +34,9 @@ const SignUp = () => {
                     <InputField placeholder="Confirm password" variant="password" />
                 </div>  
                 <div class="form-group">
-                    <DefaultButton type="submit" target="./Dashboard.js" label="Create" />
+                    <Link to="/dashboard">
+                    <DefaultButton type="submit" id="submit" className="submit-button" label="Create" />
+                    </Link>
                 </div>
                 </form>
             <div className="already">

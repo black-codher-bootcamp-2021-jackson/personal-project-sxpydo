@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InputField from "../buttons/InputField";
 import TextLink from "../buttons/TextLink";
 import DefaultButton from "../buttons/DefaultButton";
@@ -60,7 +61,9 @@ const LogIn = () => {
                                 required="required" />
                 </div>
                 <div class="form-group">
+                    <Link to="/dashboard">
                     <DefaultButton type="submit" id="submit" className="submit-button" label="Log in" />
+                    </Link>
                 </div>
                 </form>
             <div className="already">
