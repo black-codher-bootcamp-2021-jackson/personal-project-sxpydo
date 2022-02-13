@@ -1,9 +1,9 @@
 // import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
-import InputField from "../buttons/InputField";
-import TextLink from "../buttons/TextLink";
-import DefaultButton from "../buttons/DefaultButton";
+import InputField from "./buttons/InputField";
+import TextLink from "./buttons/TextLink";
+import DefaultButton from "./buttons/DefaultButton";
 
 
 const SignUp = () => {
@@ -28,10 +28,10 @@ const SignUp = () => {
                     <InputField placeholder="Mobile number" type="email" />
                 </div>
                 <div class="form-group">  
-                    <InputField placeholder="Create password" variant="password" />
+                    <InputField placeholder="Create password" type="password" />
                 </div>
                 <div class="form-group">  
-                    <InputField placeholder="Confirm password" variant="password" />
+                    <InputField placeholder="Confirm password" type="password" />
                 </div>  
                 <div class="form-group">
                     <Link to="/dashboard">

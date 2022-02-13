@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import InputField from "../buttons/InputField";
-import TextLink from "../buttons/TextLink";
-import DefaultButton from "../buttons/DefaultButton";
+import InputField from "./buttons/InputField";
+import TextLink from "./buttons/TextLink";
+import DefaultButton from "./buttons/DefaultButton";
 
 const LogIn = () => {
     const navigate = useNavigate();
@@ -57,7 +57,7 @@ const LogIn = () => {
                                 required="required" /> 
                 </div>
                 <div class="form-group">
-                    <InputField placeholder="Password*" variant="password" value={password} onChange={(e) => setPassword(e.target.value)}
+                    <InputField placeholder="Password*" type="password" value={password} onChange={(e) => setPassword(e.target.value)}
                                 required="required" />
                 </div>
                 <div class="form-group">

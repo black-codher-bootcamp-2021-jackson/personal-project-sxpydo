@@ -6,13 +6,11 @@ import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
-import Nav from "./components/Nav";
 
 
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
       <Route path="/" id="home" element={<Home />} />
       <Route path="/signup" id="sign-up" element={<SignUp />} />

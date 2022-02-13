@@ -1,10 +1,12 @@
 import React from 'react';
+import Nav from "./Nav";
 import "../styles/Home.css";
 
 const Home = () => {
 
     return (
       <>
+      <Nav />
         <div className="flexible-layout">
             <div className="step-out">
                 <h1 className="step1" style={{fontSize: "65px", transform: "matrix(1, 0, 0, -1, 0, 0)" }}>STEP OUT</h1>
