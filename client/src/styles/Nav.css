@@ -39,23 +39,23 @@
 
 /* ************************************************************************************* */
 
-  @media (min-width: 900px) { 
+  /* @media (min-width: 900px) { 
     .nav {
       padding: 30px 80px; 
     }
-  }
+  } */
   
-  @media (max-width: 430px) {
-    .nav {
+  @media (max-width: 350px) {
+    /* .nav {
       float: left;
       display: block;
       text-align: left;
-    }
+    } */
     
-    .nav-list{
+    /* .nav-list{
       float: left;
       display: none;
-    }
+    } */
   }
 
   /* NAV RESPONSIVE AFTER 430PX IN ALL ICONS SHOWING WITH IS NOT WORKING */

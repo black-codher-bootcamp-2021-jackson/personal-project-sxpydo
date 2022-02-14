@@ -16,7 +16,9 @@
       padding: 15px;
       text-align: center;
     }
-  
+    .step1, .step2 {
+      font-size: 65px;
+    }
   p {
       margin:20px 0px 16px;
       text-align: center;
@@ -109,7 +111,11 @@
   @media (max-width: 430px) {
 
     h1 {
-      font-size: small;
+      font-size: 40px;
+    }
+    
+    .step1, .step2 {
+      font-size: 50px;
     }
     #sign-form {
       font-size: 9px;
@@ -117,6 +123,11 @@
     }
     
     .form-group:hover{
-    cursor:pointer;
+      cursor:pointer;
+  }
+
+  .icon {
+    height: 50px;
   }
 }
+
