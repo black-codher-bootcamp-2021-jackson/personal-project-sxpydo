@@ -1,4 +1,7 @@
 .react-calendar { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 400px;
     max-width: 100%;
     background-color: #fff;
@@ -7,6 +10,7 @@
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     font-family: 'Poppins', sans-serif;
     line-height: 1.125em;
+    
    }
    .react-calendar__navigation button {
     color: #6f48eb;
