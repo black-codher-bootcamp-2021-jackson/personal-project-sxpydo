@@ -1,10 +1,13 @@
 import React from 'react';
+import DashNav from "../components/navs/DashNav";
+
 
 const Settings = () => {
     return (
         <>
-            <h1>Edit your profile info, profile photo, notifications, location privacy, enable/disable battery saver feature, 
-                clear app cache feature</h1>
+            <p>Edit your profile info, profile photo, notifications, location privacy, enable/disable battery saver feature, 
+                clear app cache feature</p>
+        <DashNav />
         </>
     );
 };

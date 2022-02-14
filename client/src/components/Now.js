@@ -1,9 +1,12 @@
 import React from 'react';
+import DashNav from "../components/navs/DashNav";
+
 
 const Now = () => {
     return (
         <>
-            <h1>Chat bot - send following information to listed guardians!</h1>
+            <p>Chat bot - send following information to listed guardians!</p>
+            <DashNav />
         </>
     );
 };

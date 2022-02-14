@@ -6,6 +6,12 @@ import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
+import Bookings from "./components/Booking";
+import Now from "./components/Now";
+import Guardian from "./components/Guardian";
+import Settings from "./components/Settings";
+import Journey from "./components/Journey";
+
 
 
 function App() {
@@ -17,6 +23,12 @@ function App() {
       <Route path="/login" id="log-in" element={<LogIn />} />
       <Route path="/about" id="about" element={<About />} />
       <Route path="/dashboard" id="dashboard" element={<Dashboard />} />
+      <Route path="/bookings" id="bookings" element={<Bookings />} />
+      <Route path="/guardian" id="guardian" element={<Guardian />} />
+      <Route path="/now" id="now" element={<Now />} />
+      <Route path="/settings" id="settings" element={<Settings />} />
+      <Route path="/journey" id="dashboard" element={<Journey />} />
+
       </Routes>
     </BrowserRouter>
   );

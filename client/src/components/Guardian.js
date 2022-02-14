@@ -1,9 +1,12 @@
 import React from 'react';
+import DashNav from "../components/navs/DashNav";
+
 
 const Guardian = () => {
     return (
         <>
-            <h1>Input upto 6 guardians from their contacts</h1>
+            <p>Input upto 6 guardians from their contacts</p>
+            <DashNav />
         </>
     );
 };

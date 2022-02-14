@@ -1,12 +1,15 @@
 import React from "react";
+import DashNav from "../components/navs/DashNav";
+
 
 const Journey = () => {
 
     return(
         <>
-        <h1>Journey feature to have a live GPS location where you can start and end your journey and notify guardians
+        <p>Journey feature to have a live GPS location where you can start and end your journey and notify guardians
             when you have arrived safely!
-        </h1>
+        </p>
+        <DashNav />
         </>
     )
 }
