@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import DashNav from "../components/navs/DashNav";
-import Calendar from './Calendar';
+import Calendar from './features/Calendar';
 
 const Bookings = () => {
     return (

@@ -2,8 +2,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-import LogIn from "./components/LogIn";
-import SignUp from "./components/SignUp";
+import LogIn from "./components/signup/LogIn";
+import SignUp from "./components//signup/SignUp";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Bookings from "./components/Booking";

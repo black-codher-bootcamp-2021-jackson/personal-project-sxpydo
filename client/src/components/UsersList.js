@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // SERVICES THAT CALL OUR API ENDPOINTS
-import { getAllUsers } from "../services/usersService";
+import { getAllUsers } from "../services/usersprofileService";
 
 function UsersList() {
   const [users, setUsers] = useState(null);

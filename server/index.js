@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 // It's importing and using everything from the profilesRoutes.js file and also passing app as a parameter for profileRoutes to use
 //require("./routes/profilesRoutes")(app); 
 require("./routes/usersRoutes")(app); // my routers for users
+require("./routes/loginRoutes")(app); // router for logging in
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
