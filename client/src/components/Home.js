@@ -15,7 +15,7 @@ const Home = () => {
           <div className="image-layout">
               <img
                 src="https://blush.design/api/download?shareUri=5nSdU0Szjp&w=800&h=800&fm=png"
-                alt=" Illustration by Blush" class="home-img"/>
+                alt=" Illustration by Blush" className="home-img"/>
                 <p style={{ fontFamily: "'Karla', sans-serif" }}>"Strut with confidence!"</p>
           </div>
         </div>

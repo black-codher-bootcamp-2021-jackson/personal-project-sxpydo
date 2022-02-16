@@ -13,7 +13,7 @@ const SignUp = () => {
         <div className="flexible-layout">
             <div className="image-layout">
             <img src="https://blush.design/api/download?shareUri=heh0w_1QUZ4wOFnc&w=800&h=800&fm=png"
-            alt=" Illustration by Blush" class="sign-img"/>
+            alt=" Illustration by Blush" className="sign-img"/>
             </div>
             <div id="sign-form">
                 <h1>Create an account</h1>
