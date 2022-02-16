@@ -7,6 +7,10 @@ import DefaultButton from "../buttons/DefaultButton";
 
 
 const SignUp = () => {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    };
     
     return (
         <>
@@ -17,26 +21,26 @@ const SignUp = () => {
             </div>
             <div id="sign-form">
                 <h1>Create an account</h1>
-                <form>
+                <form onSubmit={handleSubmit}>
                 <div class="form-group">
-                    <InputField placeholder="Full name" type="text" />
+                    <InputField placeholder="Full name" type="Full name" required="required" />
                 </div>
                 <div class="form-group">  
-                    <InputField placeholder="Email address" type="text" />
+                    <InputField placeholder="Email address" type="email" required="required" />
                 </div>   
                 <div class="form-group">
-                    <InputField placeholder="Mobile number" type="email" />
+                    <InputField placeholder="Mobile number" type="mobile" required="required" />
                 </div>
                 <div class="form-group">  
-                    <InputField placeholder="Create password" type="password" />
+                    <InputField placeholder="Create password" type="password" required="required" />
                 </div>
                 <div class="form-group">  
-                    <InputField placeholder="Confirm password" type="password" />
+                    <InputField placeholder="Confirm password" type="password" required="required"/>
                 </div>  
-                <div class="form-group">
-                    <Link to="/dashboard">
-                    <DefaultButton type="submit" id="submit" className="submit-button" label="Create" />
-                    </Link>
+                <div className="form-group">
+                        <DefaultButton type="submit" id="submit" className="submit-button" label="Create">
+                            <Link to="/dashboard"/>
+                        </DefaultButton>
                 </div>
                 </form>
             <div className="already">

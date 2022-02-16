@@ -11,7 +11,7 @@ const Settings = () => {
               <img alt="back icon" className="icon" src="icons/left-arrow.png"/>
         </Link>
           <div className="flexible-layout">
-            <div className="setting-layout">
+            <div id="setting-layout">
                 <div className="data-group">
                     <img
                     src="https://blush.design/api/download?shareUri=rwNg0QgluNcogQ3B&c=Backdrop_0%7Eebc3e5_Hair_0%7E4a312c_Skin_0%7E915b3c_Top_0%7Ee6985f&w=800&h=800&fm=png"

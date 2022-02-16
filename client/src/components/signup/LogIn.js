@@ -14,7 +14,7 @@ const LogIn = () => {
     useEffect(() => {
         const loggedInUser = localStorage.getItem("user")
         if (loggedInUser) {
-            console.log('Hi Gary!');
+            console.log('Hi Phil!');
             //const foundUser = JSON.parse(loggedInUser);
             //setUser(foundUser)
         }

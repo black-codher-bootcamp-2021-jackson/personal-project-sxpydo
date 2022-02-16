@@ -18,7 +18,7 @@ function About(props) {
         <section className="features" style={{textAlign: "center"}}>
         <h2>Features</h2>
         <ul style={{display: "block"}}>
-            <li> <img alt="users icon" className="icon" src="icons/user.png"/> Allows users to input upto 6 guardians from your contacts </li> <br/>
+            <li> <img alt="users icon" className="icon" src="icons/user.png"/> Allows users to input upto 5 guardians from your contacts </li> <br/>
             <li> <img alt="calendar icon" className="icon" src="icons/calendar.png"/> You can plan your journey days or weeks in advance to meet either with your chosen guardian from their contacts or 
                 a qualifed guardian to meet you at a safe meeting point to accompany you to your destination </li> <br/>
             <li> <img alt="now icon" className="icon" src="icons/now.png"/> NOW feature - With one click, a message, live GPS location and touch-activated SOS call will be sent to your 

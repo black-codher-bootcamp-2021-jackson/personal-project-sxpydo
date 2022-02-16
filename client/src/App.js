@@ -28,7 +28,6 @@ function App() {
       <Route path="/now" id="now" element={<Now />} />
       <Route path="/settings" id="settings" element={<Settings />} />
       <Route path="/journey" id="dashboard" element={<Journey />} />
-
       </Routes>
     </BrowserRouter>
   );
