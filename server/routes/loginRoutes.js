@@ -5,17 +5,21 @@ const loginRoutes = (app) => {
 
   app.post(`/api/login`, async (req, res) => {
     
-    const user = User.findOne({
+    
+    const user = await User.findOne({
           email: req.body.email,
           password: req.body.password
-      }) 
+      }).exec(); 
 
+      // console.log(user)
       if (user) {
-          return res.status(200).send(user)
+          return res.status(200).json({user})
       }
-      else if (err) {
-        res.status(500).send({ message: err });
+      else {
+        return res.status(404).json({ message: "user not found" });
       }
+
+    // return ( res.status(200).send('test'))
 
 //       .exec((err, user) => {
 //           if (err) {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import axios from "axios";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import InputField from "./InputField";
@@ -23,20 +23,21 @@ const LogIn = () => {
     // log in the user
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // const user = { email:email, password:password };
+        const user = { email:email, password:password };
+        console.log(user)
         // send the username and password to the server
-        // const response = await axios.post('http://localhost:8080/api/login', user);
-    
-        // if (response.data.user) {
+        const response = await axios.post('/api/login', user);
+        console.log(response)
+        if (response.data) {
 
-        // localStorage.setItem('user', response.data.user);
+        localStorage.setItem('user', response.data.user);
 
         navigate(`/dashboard`);
-        //}
+        }
         
-    //     else {
-    //      console.log ("User not found")
-    //  }
+        else {
+         console.log ("User not found")
+     }
     };
 
     //  that will stop the form from redirecting when you press submit
