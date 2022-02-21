@@ -6,30 +6,32 @@ import InputField from "./InputField";
 import TextLink from "../buttons/TextLink";
 import DefaultButton from "../buttons/DefaultButton";
 
-const LogIn = () => {
+const LogIn = (props) => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    useEffect(() => {
-        const loggedInUser = localStorage.getItem("user")
-        if (loggedInUser) {
-            console.log('Hi!');
-            //const foundUser = JSON.parse(loggedInUser);
-            //setUser(foundUser)
-        }
-    }, [])
+    // useEffect(() => {
+    //     const loggedInUser = localStorage.getItem("user")
+    //     if (loggedInUser) {
+    //         console.log('Hi!');
+    //         //const foundUser = JSON.parse(loggedInUser);
+    //         //setUser(foundUser)
+    //     }
+    // }, [])
 
     // log in the user
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = { email:email, password:password };
         console.log(user)
-        // send the username and password to the server
-        const response = await axios.post('/api/login', user);
-        console.log(response)
-        if (response.data) {
 
+        // send the username and password to the server
+        const response = await axios.post('http://localhost:8080/api/login', user);
+        console.log(response)
+        if (response.status === 200) {
+
+        props.setUser(response.data.user)
         localStorage.setItem('user', response.data.user);
 
         navigate(`/dashboard`);

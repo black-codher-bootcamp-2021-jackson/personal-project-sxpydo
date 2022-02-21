@@ -1,11 +1,13 @@
 import React from "react";
 import DashNav from "./navs/DashNav";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
+
+console.log(props)
 
     return(
         <>
-        <h1>Welcome to your dashboard!</h1>
+        <h1>{`Welcome ${props.user.first_name}!`}</h1>
         <div className="flexible-layout">
         <div className="image-layout">
         <p>“At work at play, let safety lead the way”</p>

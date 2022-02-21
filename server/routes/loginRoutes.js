@@ -4,14 +4,14 @@ const User = mongoose.model("users");
 const loginRoutes = (app) => {
 
   app.post(`/api/login`, async (req, res) => {
-    
+    console.log("I am logging in", req.body)
     
     const user = await User.findOne({
           email: req.body.email,
           password: req.body.password
       }).exec(); 
 
-      // console.log(user)
+      console.log(user)
       if (user) {
           return res.status(200).json({user})
       }
@@ -20,18 +20,6 @@ const loginRoutes = (app) => {
       }
 
     // return ( res.status(200).send('test'))
-
-//       .exec((err, user) => {
-//           if (err) {
-//               res.status(500).send({ message: err });
-//               return;
-//           }
-//           if (user) {
-//               res.status(400).send({ message: "Failed! Email is already in use!" });
-//               return;
-//           }
-//           next();
-//       });
   });
 };
 
