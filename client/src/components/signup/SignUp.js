@@ -1,4 +1,5 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import InputField from "./InputField";
@@ -6,14 +7,41 @@ import TextLink from "../buttons/TextLink";
 import DefaultButton from "../buttons/DefaultButton";
 
 
-const SignUp = () => {
+const SignUp = (props) => {
+    
     const navigate = useNavigate();
+    const [firstName, setFirstName] = useState();
+    const [lastName, setLastName] = useState();
+    const [email, setEmail] = useState('');
+    const [mobile, setMobile] = useState('');
+    const [location, setLocation] = useState('');
+    const [password, setPassword] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        navigate(`/dashboard`);
+
+        const user = { first_name: firstName, last_name:lastName, email:email,
+                         mobile:mobile, location:location, password:password }; 
+        console.log(user)
+
+        await axios
+        .post(`/api/user/signup`, {
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            mobile: mobile,
+            location: location,
+            password: password,
+        })
+        .then((navigate("/dashboard")))
+        // .then(call a modal to open)
+        .catch(function (error) {
+            console.log(error);
+        });
     };
-    
+
+
+
     return (
         <>
         <div className="flexible-layout">
@@ -25,22 +53,32 @@ const SignUp = () => {
                 <h1>Create an account</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <InputField placeholder="Full name" type="Full name" required="required" />
+                        <InputField placeholder="First name" type="First name" required="required" 
+                            onChange={(e) => setFirstName(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <InputField placeholder="Last name" type="Last name" required="required" 
+                            onChange={(e) => setLastName(e.target.value)} />
                     </div>
                     <div className="form-group">  
-                        <InputField placeholder="Email address" type="email" required="required"/>
+                        <InputField placeholder="Email address" type="email" required="required"
+                            onChange={(e) => setEmail(e.target.value)} />
                     </div>   
                     <div className="form-group">
-                        <InputField placeholder="Mobile number" type="mobile" required="required" />
+                        <InputField placeholder="Mobile number" type="mobile" required="required"
+                            onChange={(e) => setMobile(e.target.value)} />
                     </div>
                     <div className="form-group">  
-                        <InputField placeholder="Location" type="location" required="required" />
+                        <InputField placeholder="Location" type="location" required="required"
+                            onChange={(e) => setLocation(e.target.value)} />
                     </div>
                     <div className="form-group">  
-                        <InputField placeholder="Create password" type="password" required="required" />
+                        <InputField placeholder="Create password" type="password" required="required"
+                            onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className="form-group">  
-                        <InputField placeholder="Confirm password" type="password" required="required" />
+                        <InputField placeholder="Confirm password" type="password" required="required"
+                            onChange={(e) => setPassword(e.target.value)} />
                     </div>  
                     <div className="form-group">
                         <DefaultButton type="submit" id="submit" className="submit-button" label="Create">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -11,22 +11,13 @@ const LogIn = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    // useEffect(() => {
-    //     const loggedInUser = localStorage.getItem("user")
-    //     if (loggedInUser) {
-    //         console.log('Hi!');
-    //         //const foundUser = JSON.parse(loggedInUser);
-    //         //setUser(foundUser)
-    //     }
-    // }, [])
 
-    // log in the user
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = { email:email, password:password };
         console.log(user)
 
-        // send the username and password to the server
+
         const response = await axios.post('http://localhost:8080/api/login', user);
         console.log(response)
         if (response.status === 200) {
@@ -41,15 +32,6 @@ const LogIn = (props) => {
          console.log ("User not found")
      }
     };
-
-    //  that will stop the form from redirecting when you press submit
-    // const onSubmit = (event) => {
-    //     // Prevent the browser from handling the submit and redirecting
-    //     event.preventDefault()
-      
-    //     // Do what you actually want to do with the form after preventing default
-    //     console.log("You should see this message in the console")
-    //   }
 
     return (
         <>

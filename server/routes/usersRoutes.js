@@ -8,13 +8,20 @@ const usersRoutes = (app) => {
     return res.status(200).send(users);
   });
 
-  app.post(`/api/user`, async (req, res) => {
-    const user = await User.create(req.body);
+  app.post('http://localhost:8080/api/user/signup', async (req, res) => {
+    const user = await User.findOne({
+      email: req.body.email,
+      password: req.body.password
+    }).exec(); 
 
-    return res.status(201).send({
-      error: false,
-      user,
-    });
+    console.log(user)
+    if (user) {
+        return res.status(200).json({user})
+    }
+    else {
+      return res.status(404).json({ message: "ERROR!!" });
+    }
+
   });
 
   app.put(`/api/user/:id`, async (req, res) => {

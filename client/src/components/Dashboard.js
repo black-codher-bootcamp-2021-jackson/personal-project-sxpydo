@@ -16,7 +16,7 @@ console.log(props)
             alt=" Illustration by Blush" className="dash-img"/>
             </div>
         <div className="maps">
-            <p>Maps will be located here</p>
+            <p>COMING SOON - Real time Maps</p>
         </div>
         </div>
         <DashNav />
