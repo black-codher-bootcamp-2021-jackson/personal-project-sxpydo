@@ -14,9 +14,6 @@ const Guardian = () => {
 
     return (
         <>
-        <Link to="/dashboard" id="backlink" className="nav-btn">
-              <img alt="back icon" className="icon" src="icons/left-arrow.png"/>
-        </Link>
                 <h2> <Link Link to="/dashboard" id="backlink" className="nav-btn">
                         <img alt="back icon" className="icon" src="icons/left-arrow.png"/>
                         </Link>
