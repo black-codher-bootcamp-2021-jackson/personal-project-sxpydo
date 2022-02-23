@@ -11,25 +11,18 @@ const LogIn = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = { email:email, password:password };
-        console.log(user)
-
 
         const response = await axios.post('http://localhost:8080/api/login', user);
-        console.log(response)
         if (response.status === 200) {
-
-        props.setUser(response.data.user)
-        localStorage.setItem('user', response.data.user);
-
-        navigate(`/dashboard`);
+            props.setUser(response.data.user)
+            localStorage.setItem('user', response.data.user);
+            navigate(`/dashboard`);
         }
-        
         else {
-         console.log ("User not found")
+            console.log ("User not found")
      }
     };
 

@@ -7,9 +7,6 @@ import InputField from "./signup/InputField";
 const Settings = () => {
     return (
         <>
-        <Link to="/dashboard" id="backlink" className="nav-btn">
-              <img alt="back icon" className="icon" src="icons/left-arrow.png"/>
-        </Link>
           <div className="flexible-layout">
             <div id="setting-layout">
                 <div className="data-group">
@@ -36,15 +33,22 @@ const Settings = () => {
             </div>
             </div>
           <div className="image-layout">
-              <h1>Privacy and Data</h1>
+              <h1> <Link Link to="/dashboard" id="backlink" className="nav-btn">
+                        <img alt="back icon" className="icon" src="icons/left-arrow.png"/>
+                        </Link>
+                Privacy and Data</h1>
                   <h3>Maps view</h3> <p>Street // Satalite</p> <br/>
                   <h3>Battery Saver activation</h3> <p>Step Out can be used outside from the app saving battery while on the go!</p>
                   <br/>
-                  <h3>Dark theme</h3> <p>Change the appearence of Step Out</p> <br/>
                   <h3>Now notification</h3>
                   <p>Show a floating button to see latest updates and able to use the app on the go,
                       while your device is locked or while using other apps </p> <br/>
                   <h3>Clear app cache</h3>
+                  <div className="log-out">
+                        <Link to="/login" id="backlink" className="nav-btn">
+                            <img alt="log out icon" className="icon" src="icons/log-out.png"/>
+                        </Link>
+                  </div>
           </div>
         </div>
         <DashNav />

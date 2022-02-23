@@ -17,7 +17,10 @@ const Guardian = () => {
         <Link to="/dashboard" id="backlink" className="nav-btn">
               <img alt="back icon" className="icon" src="icons/left-arrow.png"/>
         </Link>
-                <h2>Take 5 and Stay Alive</h2>
+                <h2> <Link Link to="/dashboard" id="backlink" className="nav-btn">
+                        <img alt="back icon" className="icon" src="icons/left-arrow.png"/>
+                        </Link>
+                Take 5 and Stay Alive</h2>
                 <p>Input upto 5 guardians from your contacts</p>
             <div id="guardian-form">
                 <h1>Add guardian</h1>

@@ -15,8 +15,9 @@ console.log(props)
             src="https://blush.design/api/download?shareUri=otuoM_8wLg0KiKiw&w=800&h=800&fm=png"
             alt=" Illustration by Blush" className="dash-img"/>
             </div>
-        <div className="maps">
-            <p>COMING SOON - Real time Maps</p>
+        <div className="chatbot">
+        <img style={{height: "150px"}} alt="coming soon icon" className="icon" src="icons/coming-soon.png"/>
+            <p>Chatterbot</p>
         </div>
         </div>
         <DashNav />
