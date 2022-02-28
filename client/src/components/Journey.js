@@ -11,7 +11,9 @@ const Journey = () => {
             <Link to="/dashboard" id="backlink" className="nav-btn">
                 <img alt="back icon" className="icon" src="icons/left-arrow.png"/>
             </Link>
-        <Map />
+        <Map /> <br /><br />
+        <p>Add a start and end location on live GPS maps to notify your selected guardians 
+           when you have reached your chosen destination safely - all in real time!</p>
         <DashNav />
         </>
     )
