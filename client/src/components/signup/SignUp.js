@@ -22,22 +22,17 @@ const SignUp = (props) => {
 
         const user = { first_name: firstName, last_name:lastName, email:email,
                          mobile:mobile, location:location, password:password }; 
-        console.log(user)
+        // console.log(user)
 
-        await axios
-        .post(`/api/user/signup`, {
-            first_name: firstName,
-            last_name: lastName,
-            email: email,
-            mobile: mobile,
-            location: location,
-            password: password,
-        })
-        .then((navigate("/dashboard")))
-        // .then(call a modal to open)
-        .catch(function (error) {
-            console.log(error);
-        });
+        const response = await axios.post('http://localhost:8080/api/user/signup', user);
+        if (response.status === 200) {
+            props.setUser(response.data.user)
+            localStorage.setItem('user', response.data.user);
+            navigate(`/dashboard`);
+        }
+        else {
+            console.log ("Register error")
+     }
     };
 
 

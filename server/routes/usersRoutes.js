@@ -3,25 +3,27 @@ const User = mongoose.model("users");
 
 const usersRoutes = (app) => {
   app.get(`/api/user`, async (req, res) => {
-    const users = await User.find();
+    const user = await User.find();
 
-    return res.status(200).send(users);
+    return res.status(200).send(user);
   });
 
-  app.post('http://localhost:8080/api/user/signup', async (req, res) => {
-    const user = await User.findOne({
-      email: req.body.email,
-      password: req.body.password
-    }).exec(); 
-
-    console.log(user)
-    if (user) {
-        return res.status(200).json({user})
+  app.post(`/api/user/signup`, async (req, res) => {
+    console.log(req.body)
+    try {
+        await User.create({
+          first_name: req.body.firstName,
+          last_name: req.body.lastName,
+          location: req.body.location,
+          password: req.body.password,
+          emailAddress: req.body.emailAddress,
+          mobile: req.body.mobile,
+      })
+      res.json({status: 'success!'})
+    } catch (err) {
+      res.json({status: 'error', error: 'Email already exists' })
     }
-    else {
-      return res.status(404).json({ message: "ERROR!!" });
-    }
-
+    
   });
 
   app.put(`/api/user/:id`, async (req, res) => {
