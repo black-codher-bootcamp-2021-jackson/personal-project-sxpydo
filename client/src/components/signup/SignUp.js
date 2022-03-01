@@ -10,8 +10,8 @@ import DefaultButton from "../buttons/DefaultButton";
 const SignUp = (props) => {
     
     const navigate = useNavigate();
-    const [firstName, setFirstName] = useState();
-    const [lastName, setLastName] = useState();
+    const [first_name, setFirstName] = useState();
+    const [last_name, setLastName] = useState();
     const [email, setEmail] = useState('');
     const [mobile, setMobile] = useState('');
     const [location, setLocation] = useState('');
@@ -20,18 +20,18 @@ const SignUp = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const user = { first_name: firstName, last_name:lastName, email:email,
+        const user = { first_name: first_name, last_name:last_name, email:email,
                          mobile:mobile, location:location, password:password }; 
         // console.log(user)
 
-        const response = await axios.post('http://localhost:8080/api/user/signup', user);
+        const response = await axios.post('http://localhost:8080/api/user', user);
         if (response.status === 200) {
             props.setUser(response.data.user)
             localStorage.setItem('user', response.data.user);
             navigate(`/dashboard`);
         }
         else {
-            console.log ("Register error")
+            console.log ("Ooops! Register error")
      }
     };
 

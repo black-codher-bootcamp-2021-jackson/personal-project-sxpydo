@@ -8,21 +8,32 @@ const usersRoutes = (app) => {
     return res.status(200).send(user);
   });
 
-  app.post(`/api/user/signup`, async (req, res) => {
+  app.post(`/api/user/`, async (req, res) => {
     console.log(req.body)
-    try {
-        await User.create({
-          first_name: req.body.firstName,
-          last_name: req.body.lastName,
-          location: req.body.location,
-          password: req.body.password,
-          emailAddress: req.body.emailAddress,
-          mobile: req.body.mobile,
-      })
-      res.json({status: 'success!'})
-    } catch (err) {
-      res.json({status: 'error', error: 'Email already exists' })
-    }
+    
+    const user = await User.create(req.body);
+
+    return res.status(201).send({
+      error: false,
+      user,
+    });
+   
+    // const user = await User.create({
+    //       first_name: req.body.first_name,
+    //       last_name: req.body.last_name,
+    //       location: req.body.location,
+    //       password: req.body.password,
+    //       email: req.body.email,
+    //       mobile: req.body.mobile,
+    //     }).exec(); 
+
+    //     console.log(user)
+    //     if (user) {
+    //         return res.status(200).json({user})
+    //     }
+    //     else {
+    //       return res.status(404).json({ message: "Email already exists!" });
+    //     }
     
   });
 
