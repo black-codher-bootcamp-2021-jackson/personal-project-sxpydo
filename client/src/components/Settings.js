@@ -45,7 +45,7 @@ const Settings = () => {
                       while your device is locked or while using other apps </p> <br/>
                   <h3>Clear app cache</h3>
                   <div className="log-out">
-                        <Link to="/login" id="backlink" className="nav-btn">
+                        <Link to="/" id="backlink" className="nav-btn">
                             <img alt="log out icon" className="icon" src="icons/log-out.png"/>
                         </Link>
                   </div>
