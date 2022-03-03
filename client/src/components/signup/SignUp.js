@@ -21,11 +21,10 @@ const SignUp = (props) => {
         e.preventDefault();
 
         const user = { first_name: first_name, last_name:last_name, email:email,
-                         mobile:mobile, location:location, password:password }; 
-        // console.log(user)
+                         mobile:mobile, location:location, password:password };
 
         const response = await axios.post('http://localhost:8080/api/user', user);
-        if (response.status === 200) {
+        if (response.status === 201) {
             props.setUser(response.data.user)
             localStorage.setItem('user', response.data.user);
             navigate(`/dashboard`);
