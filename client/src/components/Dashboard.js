@@ -17,9 +17,10 @@ console.log(props)
             alt=" Illustration by Blush" className="dash-img"/>
             </div>
         <div className="chatbot">
-        <img style={{height: "150px"}} alt="coming soon icon" className="icon" src="icons/coming-soon.png"/>
-            <p>Chatterbot</p>
             <ChatBot />
+            <p>Your safety net when guardians are busy or needing guidance in using
+                the Step Out app!
+            </p>
         </div>
         </div>
         <DashNav />
