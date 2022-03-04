@@ -37,7 +37,7 @@ const Settings = () => {
                         <img alt="back icon" className="icon" src="icons/left-arrow.png"/>
                         </Link>
                 Privacy and Data</h1>
-                  <h3>Maps view</h3> <p>Street // Satalite</p> <br/>
+                  <h3>Maps view</h3> <p>Light mode // Dark mode</p> <br/>
                   <h3>Battery Saver activation</h3> <p>Step Out can be used outside from the app saving battery while on the go!</p>
                   <br/>
                   <h3>Now notification</h3>

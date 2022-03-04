@@ -1,4 +1,5 @@
 import React from "react";
+import ChatBot from "./features/chatterbot/Chatbot";
 import DashNav from "./navs/DashNav";
 
 const Dashboard = (props) => {
@@ -18,6 +19,7 @@ console.log(props)
         <div className="chatbot">
         <img style={{height: "150px"}} alt="coming soon icon" className="icon" src="icons/coming-soon.png"/>
             <p>Chatterbot</p>
+            <ChatBot />
         </div>
         </div>
         <DashNav />
