@@ -34,6 +34,23 @@ const Guardian = () => {
                 <div class="form-group">
                     <InputField placeholder="Mobile number" type="mobile" required="required" />
                 </div>
+                <div class="form-group">
+                    <select id="dropdown" name="dropdown" required="required">
+                    <option disabled selected value>Relationship to you</option>
+                        <option value="mother">Mother</option>
+                        <option value="father">Father</option>
+                        <option value="son">Son</option>
+                        <option value="daughter">Daughter</option>
+                        <option value="husband">Husband</option>
+                        <option value="wife">Wife</option>
+                        <option value="partner">Partner</option>
+                        <option value="brother">Brother</option>
+                        <option value="sister">Sister</option>
+                        <option value="in-law">Mother-in-law</option>
+                        <option value="in-law">Father-in-law</option>
+                        <option value="friend">Friend</option>
+                    </select>
+                </div>
                 <div className="form-group">
                         <DefaultButton type="submit" id="submit" className="submit-button" label="Add">
                             <Link to="/guardian"/>

@@ -18,8 +18,7 @@ console.log(props)
             </div>
         <div className="chatbot">
             <ChatBot />
-            <p>Your safety net when guardians are busy or needing guidance in using
-                the Step Out app!
+            <p>Chatterbot is your safety net when you need quick access while you're guardians are busy...
             </p>
         </div>
         </div>
